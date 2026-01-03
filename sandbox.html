@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Preview Sandbox</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+    #editor {
+      width: 50%;
+      height: 100%;
+    }
+    iframe {
+      width: 50%;
+      border: none;
+      background: white;
+    }
+  </style>
+
+  <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+</head>
+<body>
+
+<div id="editor"></div>
+<iframe id="preview" sandbox="allow-scripts"></iframe>
+
+<script src="sandbox.js"></script>
+
+</body>
+</html>

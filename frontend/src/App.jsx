@@ -265,7 +265,7 @@ function App() {
 
                   <button
                     onClick={build}
-                    disabled={!user || !user.name || isLoading}
+                    disabled={isLoading}
                     className={`
                       flex items-center justify-center gap-2 transition-all duration-200 uppercase tracking-wider font-bold text-[10px] md:text-xs
                       ${isExpanded ? "w-full py-2 md:py-3" : "px-6 md:px-8 py-3"}
@@ -273,8 +273,8 @@ function App() {
                         isLoading
                           ? "bg-zinc-800 text-zinc-500 border border-zinc-800 cursor-not-allowed"
                           : !user || !user.name
-                          ? "bg-zinc-900 text-zinc-600 border border-zinc-800 cursor-not-allowed"
-                          : "bg-orange-600 text-white hover:bg-orange-500 border border-orange-500 shadow-[0_0_20px_rgba(234,88,12,0.3)]"
+                          ? "bg-zinc-900 text-zinc-500 border border-zinc-800 cursor-pointer hover:bg-zinc-800 hover:border-zinc-700"
+                          : "bg-orange-600 text-white hover:bg-orange-500 border border-orange-500 shadow-[0_0_20px_rgba(234,88,12,0.3)] cursor-pointer"
                       }
                     `}
                   >
